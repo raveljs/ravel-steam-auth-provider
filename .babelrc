@@ -1,0 +1,5 @@
+
+{
+  "retainLines": true,
+  "plugins": ["transform-decorators-legacy"]
+}

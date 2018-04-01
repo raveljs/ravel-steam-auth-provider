@@ -1,5 +1,6 @@
 node_modules
 *.sublime-workspace
 npm-debug.log
-.idea
-dist
+/test-dist
+reports
+/dist

@@ -1,5 +1,4 @@
 language: node_js
-sudo: false
 env:
   - CXX=g++-4.8
 addons:
@@ -9,10 +8,10 @@ addons:
     packages:
     - g++-4.8
 node_js:
-  - "7"
-  - "6"
+  - "8"
+  - "9"
 before_install:
   - $CXX --version
-  - npm install -g gulp
   - npm install
-script: gulp lint
+after_script:
+  - codeclimate-test-reporter < reports/lcov.info
