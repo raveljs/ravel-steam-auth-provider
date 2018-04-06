@@ -27,10 +27,10 @@
     "debug-remote": "node --debug-brk=5858 $(which gulp) --require source-map-support/register test-no-cov"
   },
   "dependencies": {
-    "passport-steam": "1.0.8"
+    "passport-steam": "1.0.9"
   },
   "peerDependencies": {
-    "ravel": "0.23.x"
+    "ravel": "0.24.x"
   },
   "devDependencies": {
     "chai": "4.1.2",
@@ -46,9 +46,9 @@
     "eslint-plugin-node": "6.0.1",
     "eslint-plugin-standard": "3.0.1",
     "eslint-plugin-promise": "3.7.0",
-    "eslint-plugin-jsdoc": "3.5.0",
+    "eslint-plugin-jsdoc": "3.6.1",
     "redis-mock": "0.21.0",
-    "ravel": "0.23.x",
+    "ravel": "0.24.x",
     "sinon": "4.5.0",
     "sinon-chai": "3.0.0",
     "upath": "1.0.4",
