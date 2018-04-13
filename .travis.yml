@@ -1,26 +1,20 @@
 language: node_js
-
 env:
 - CXX=g++-4.8
-
 addons:
   apt:
     sources:
     - ubuntu-toolchain-r-test
     packages:
     - g++-4.8
-
 node_js:
 - '8'
 - '9'
-
 before_install:
 - "$CXX --version"
 - npm install
-
 after_script:
 - codeclimate-test-reporter < reports/lcov.info
-
 deploy:
 - provider: releases
   api_key:
@@ -31,12 +25,11 @@ deploy:
     tags: true
     node: '8'
 - provider: npm
-  email: michael@laccetti.com
+  email: robot@raveljs.com
   tag: next
   api_key:
-    secure: lzPKjRx3Dy6wvV3xvpt50dqxrp1mZOieGdM7hJl6+BYF9X7YRWx7Kns+idgb2c9SeKtgZOt4B7Ki60/KayZnXTsrgQGTQt/ddyOnWXc+hSCSia3JRIZn7xz/WYolQW1yJftm46+/PSzfhjHNKEqKSkfpfuRuTgmve3QPK/nSbkxY+KzLNmY2txwdM9drxq3ExTzW2rKtbzIMKHKv4MZVe9hscJ0K+N25njorqZZXGTdtuUamZ4Mhu2MG647ahOyYOKSeKwprzPa1O6kMkPz/2Eqrv1gTz7cJedZnXpuT1GgMsFf79SZbDb0KsNCibWjJqFaXOxsfY9RP/s8fLcJ+55hmBMTjQYyScUO2tHglIvvg3TDWmO0JNbgsb5Fr53tLb1oqV+XQJ+zwW4CyADtDTzZoNefEW/OYTlaavC9SSSZNmODp3+xw+Dl3Rrn8ZmALCQ4GsC2eHWSHlOlsuJ10H7blFjrsJ0X+WBRHj2+7rlLTaiwtf3EkLARtoGrsTISTNhA94f9uy6sq6KSFjsN+/ynv399vkCfBf2cTOUITvjsFxmt3QqjEWcwrP+1DhKIZvWSMByZ8G9FRrKZEWKC+rfdpdk8es8mpRceNJLZPc4DD1IVkDmuB0gB0G5DqGUVjEB1LmqA6V9sppADghqceGyRZUNoEPIQPE+FUdTHO2Y0=
+    secure: zCndhEXZ88s1/lLR2UGMCmHja1LtkFqy5PIFy/tRDhJr+HHMFbPxRLlExNWGH7mvvlV7VJx1B4u+h3Fvf/Ny5kXOm/J86HNxjYh9utcIeZ41MHEz3jqEA3DEfFr+FkWMp/RE+LX/dZ1IrNJBq6SD5Xx1DcM/V74jm1DaKUspA/EqJ4uEij8VbCM0WYuTqHKRwKT/s4wC9yEZzMy9Nhe+26v23aFQuvD938xRhF1kPzVKG7/ZAHuzFMa2ud36VgbW21FrAGqQ3uR0FBzQe+T/MF4oGyMdbUpPo7YrV91nG6nYXmm6p1FeuUT2o3up4+eWjDA2PAgd3LzyCD7LiFA4iZS7uNcadQYNtkpIfPozW25j99ZTqxfGGPBIlYo2A/SRJGdcKytV9DUXd5nOcIthRpxVhQvfCkRywA3rhpcPTn3tlQivhKfsxexLU0WWNdbO/0zD56DVet0Sa7gzETQJ7tcr+t1Ru4rWTcTGDAV1e+54+5wnbHDsrIFydF4t/G/IqU0B+EoUCZcNP02amP5GhrNRvqui46p/pk2c35g4zVuaEWdY2lXI0SkEXGhgGnFwGEb/rlcNLKXoFM6RWv1Pgb6iQscE1tYMmluMfBCGQHbzH/b5Ebos4nWEsGMDpjDgtalkepSm81KSQkxO8196iakemGkuIx3LZJb33sdV3hc=
   on:
     repo: raveljs/ravel-steam-auth-provider
     tags: true
     node: '8'
-
