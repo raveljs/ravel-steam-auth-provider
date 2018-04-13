@@ -19,7 +19,6 @@ deploy:
 - provider: releases
   api_key:
     secure: Ak2rWnFO5Hlu5Va5btfau1jZGYmfIyPrvaWO3rh/CphxkM7wv9cmYy5pFtWbyFLaEY0uiCV4B+gT1G5rcjiYqrzgQ9FFHBy2J2MsUTvaVzCUXGPFr6razkDDUsEf8fv+LMnjsS0V29ElTS7/46XCRsHPr3z+t4fdXCEQPmcHmc2uaL7rDsECNnxmkEEffMyF+at/Rvz5xXAr7btLalbnaEBpSMWCZWjiPtdKjSZXXJnnQ2vgqCYBNrVz706JxtFfQAj86TiBPR6TFELxZpdrgT4oper47QQTNiMgRJA6VUbeTvkgivNjNF61eAFrojkgwORJKhpg5mUEu4f0T/RSsmJf9oOg+fvA/V0jczjE8R99ILmPX2cTL12+V2AiXPeUH9+fsKVVC2IYyMGwLhDbwE6TQzV1gdjwhBSnfeF6Cz6rqJqP0ePAn/s3ndrVLUKpc+DHPTbEvZlXO5F82J0WaaC16T6SDI9+iN/j7mrpa7xLTmTmx+xlZPSUaCXuyiGUt3xgr10DyiwmmcuhPgmzUDMfaNU534uMXs17096i12tV5VHKSZaHcdCw0ai+VCMRViq7Bk2c5od5oIowCuCpwtxyOun0aqt2AKxHihkEhrb94SQmXMIM5ZJkruFD7FOgmA7hUN4SDlNU8EqLNF4876hrlL1IBaf5cF5MeOX2JtY=
-  file: release/ravel-steam-openid-provider.tgz
   on:
     repo: raveljs/ravel-steam-auth-provider
     tags: true

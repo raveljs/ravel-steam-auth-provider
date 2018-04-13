@@ -2,14 +2,12 @@
 
 > Ravel Authorization Provider for Steam
 
-**Note:** This module is currently untested.
-
 ## Example usage:
 
 *app.js*
 ```javascript
 const Ravel = require('ravel');
-const RavelSteamOpenIdProvider = require('@ravelravel-steam-auth-provider');
+const RavelSteamOpenIdProvider = require('@ravel\ravel-steam-auh-provider');
 
 const app = new Ravel();
 new RavelSteamOpenIdProvider(app); // eslint-disable-line no-new
@@ -48,27 +46,46 @@ const Module = Ravel.Module;
 const authconfig = Module.authconfig;
 
 @authconfig
-@inject('user-profiles')
+@inject('service.user-service')
 class AuthConfig extends Module {
-  constructor(userProfiles) {
-    this.userProfiles = userProfiles;
+  constructor (userProvider) {
+    super();
+    this.userProvider = userProvider;
   }
-  serializeUser(profile) {
+
+  serializeUser (profile) {
     // serialize profile to session using the id field
-    return Promise.resolve(profile.id);
+    this.log.debug(`Serializing ${JSON.stringify(profile)} to session.`);
+    return Promise.resolve(profile);
   }
-  deserializeUser(id) {
+
+  deserializeUser (profile) {
     // retrieve profile from database using id from session
-    return this.userProfiles.getProfile(id);
+    this.log.debug(`Retrieving user from DB using ${profile.id}`);
+    return this.userProvider.getProfile(profile.id);
   }
-  verify(providerName, ...args) {
-    if (providerName === 'google-oauth2-web') {
-      const accessToken = args[0];
-      const refreshToken = args[1];
-      const profile = args[2];
-      // TODO something more complex, such as using/storing tokens
-      return Promise.resolve(profile);
+
+  async verify (providerName, ...args) {
+    this.log.debug(`Steam verify invoked for ${providerName}.`);
+    if (providerName === 'steam-auth-web') {
+      const profile = args[1];
+
+      this.log.debug(`Verifying user with profile ${JSON.stringify(profile)}`);
+
+      let user = null;
+      const userExists = await this.userProvider.profileExists(profile.id);
+      if (userExists === false) {
+        this.log.debug('User does not exist, creating.');
+        user = await this.userProvider.createProfile(profile);
+      } else {
+        this.log.debug('User exists, retrieving from DB.');
+        user = await this.userProvider.getProfileBySteamId(profile.id);
+      }
+
+      this.log.debug(`User from DB: ${JSON.stringify(user)}`);
+      return Promise.resolve(user);
     }
+    return Promise.reject(new Error(`Unsupported authentication provider (${providerName}) used.`));
   }
 }
 
