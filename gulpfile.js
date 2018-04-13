@@ -5,7 +5,7 @@ const plugins = require('gulp-load-plugins')();
 const del = require('del');
 
 const TESTS = [
-  'test-dist/test/test-ravel-steam-openid-provider.js',
+  'test-dist/test/test-ravel-steam-auth-provider.js',
   'test-dist/test/test-integration.js'
 ];
 
