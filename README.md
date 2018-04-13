@@ -1,6 +1,6 @@
-# ravel-steam-openid-provider
+# ravel-steam-auth-provider
 
-> Ravel AuthorizationProvider for Steam OpenID
+> Ravel Authorization Provider for Steam
 
 **Note:** This module is currently untested.
 
@@ -9,7 +9,7 @@
 *app.js*
 ```javascript
 const Ravel = require('ravel');
-const RavelSteamOpenIdProvider = require('ravel-steam-openid-provider');
+const RavelSteamOpenIdProvider = require('@ravelravel-steam-auth-provider');
 
 const app = new Ravel();
 new RavelSteamOpenIdProvider(app); // eslint-disable-line no-new

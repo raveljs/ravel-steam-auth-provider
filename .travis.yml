@@ -22,20 +22,21 @@ after_script:
 - codeclimate-test-reporter < reports/lcov.info
 
 deploy:
-  - provider: releases
-    api_key:
-      secure: Ak2rWnFO5Hlu5Va5btfau1jZGYmfIyPrvaWO3rh/CphxkM7wv9cmYy5pFtWbyFLaEY0uiCV4B+gT1G5rcjiYqrzgQ9FFHBy2J2MsUTvaVzCUXGPFr6razkDDUsEf8fv+LMnjsS0V29ElTS7/46XCRsHPr3z+t4fdXCEQPmcHmc2uaL7rDsECNnxmkEEffMyF+at/Rvz5xXAr7btLalbnaEBpSMWCZWjiPtdKjSZXXJnnQ2vgqCYBNrVz706JxtFfQAj86TiBPR6TFELxZpdrgT4oper47QQTNiMgRJA6VUbeTvkgivNjNF61eAFrojkgwORJKhpg5mUEu4f0T/RSsmJf9oOg+fvA/V0jczjE8R99ILmPX2cTL12+V2AiXPeUH9+fsKVVC2IYyMGwLhDbwE6TQzV1gdjwhBSnfeF6Cz6rqJqP0ePAn/s3ndrVLUKpc+DHPTbEvZlXO5F82J0WaaC16T6SDI9+iN/j7mrpa7xLTmTmx+xlZPSUaCXuyiGUt3xgr10DyiwmmcuhPgmzUDMfaNU534uMXs17096i12tV5VHKSZaHcdCw0ai+VCMRViq7Bk2c5od5oIowCuCpwtxyOun0aqt2AKxHihkEhrb94SQmXMIM5ZJkruFD7FOgmA7hUN4SDlNU8EqLNF4876hrlL1IBaf5cF5MeOX2JtY=
-    file: release/ravel-steam-openid-provider.tgz
-    on:
-      repo: raveljs/ravel-steam-auth-provider
-      tags: true
-      node: '8'
-  - provider: npm
-    email: michael@laccetti.com
-    tag: next
-    api_key:
-      secure: tEW6Wp9QRDOFYS2v56NlcaWQHNy3Wv0eqDYOXpMuXtaeeU/KjWMCptGuAN59wvbjDAvkXLdcbAqPTBz6+2aQCROrdZSR1OUkNtqg+yUWvAWV3K5NvgnRIdSzoJDdhvZ99Ctxl93ncpsCWDrdOs3G0z2LVJ9/jYKvF6ljDYVypptGdaeemEQaT0JPbaYAOPa+ZeeiCnxPmXyPiwEB3GTsJqLddEei9J28gfbPAzQbjjy44aNMpdtpDlwwMz6XrNm78b7QNrf+SNgmmViH45T886VOhks8OfqUo+zmN6LAQUJlrntqbLvLfUZhu99dBMmtHoNGdn0LBkt4aO3PCyxI6m3C9T3p2ZZdxhULdLEf2NupYj8dAdUJY+T2XXKQZXjavjxinxoOLHAOhAEHJKOHb+7tiLYBhxQ4X9NlOySU5LAAd/GfZMPG1XtsEDJ9jVg2gNu6yGitiCJvF+A+Dmx5p2MqlxHa3BTRB1SFv4N7KCBESrN5SxJsXzxaRcp7vpYZNnYcFVNvV/7p57oF5Rk6oMIp9jeov/jPdc/xQStl1/5O2wvOfKi2Cx0uQmEZZ4d8sxujm5LHqS+noD9ZKYmFRdilZb75xSJYVxthcEN6E7H445g0/DRJ4mjnAolyKzg+T27ID3L9fNpkhIdeIGT30ZdaOmurifquSz7pCHaFuaY=
-    on:
-      repo: raveljs/ravel-steam-auth-provider
-      tags: true
-      node: '8'
+- provider: releases
+  api_key:
+    secure: Ak2rWnFO5Hlu5Va5btfau1jZGYmfIyPrvaWO3rh/CphxkM7wv9cmYy5pFtWbyFLaEY0uiCV4B+gT1G5rcjiYqrzgQ9FFHBy2J2MsUTvaVzCUXGPFr6razkDDUsEf8fv+LMnjsS0V29ElTS7/46XCRsHPr3z+t4fdXCEQPmcHmc2uaL7rDsECNnxmkEEffMyF+at/Rvz5xXAr7btLalbnaEBpSMWCZWjiPtdKjSZXXJnnQ2vgqCYBNrVz706JxtFfQAj86TiBPR6TFELxZpdrgT4oper47QQTNiMgRJA6VUbeTvkgivNjNF61eAFrojkgwORJKhpg5mUEu4f0T/RSsmJf9oOg+fvA/V0jczjE8R99ILmPX2cTL12+V2AiXPeUH9+fsKVVC2IYyMGwLhDbwE6TQzV1gdjwhBSnfeF6Cz6rqJqP0ePAn/s3ndrVLUKpc+DHPTbEvZlXO5F82J0WaaC16T6SDI9+iN/j7mrpa7xLTmTmx+xlZPSUaCXuyiGUt3xgr10DyiwmmcuhPgmzUDMfaNU534uMXs17096i12tV5VHKSZaHcdCw0ai+VCMRViq7Bk2c5od5oIowCuCpwtxyOun0aqt2AKxHihkEhrb94SQmXMIM5ZJkruFD7FOgmA7hUN4SDlNU8EqLNF4876hrlL1IBaf5cF5MeOX2JtY=
+  file: release/ravel-steam-openid-provider.tgz
+  on:
+    repo: raveljs/ravel-steam-auth-provider
+    tags: true
+    node: '8'
+- provider: npm
+  email: michael@laccetti.com
+  tag: next
+  api_key:
+    secure: lzPKjRx3Dy6wvV3xvpt50dqxrp1mZOieGdM7hJl6+BYF9X7YRWx7Kns+idgb2c9SeKtgZOt4B7Ki60/KayZnXTsrgQGTQt/ddyOnWXc+hSCSia3JRIZn7xz/WYolQW1yJftm46+/PSzfhjHNKEqKSkfpfuRuTgmve3QPK/nSbkxY+KzLNmY2txwdM9drxq3ExTzW2rKtbzIMKHKv4MZVe9hscJ0K+N25njorqZZXGTdtuUamZ4Mhu2MG647ahOyYOKSeKwprzPa1O6kMkPz/2Eqrv1gTz7cJedZnXpuT1GgMsFf79SZbDb0KsNCibWjJqFaXOxsfY9RP/s8fLcJ+55hmBMTjQYyScUO2tHglIvvg3TDWmO0JNbgsb5Fr53tLb1oqV+XQJ+zwW4CyADtDTzZoNefEW/OYTlaavC9SSSZNmODp3+xw+Dl3Rrn8ZmALCQ4GsC2eHWSHlOlsuJ10H7blFjrsJ0X+WBRHj2+7rlLTaiwtf3EkLARtoGrsTISTNhA94f9uy6sq6KSFjsN+/ynv399vkCfBf2cTOUITvjsFxmt3QqjEWcwrP+1DhKIZvWSMByZ8G9FRrKZEWKC+rfdpdk8es8mpRceNJLZPc4DD1IVkDmuB0gB0G5DqGUVjEB1LmqA6V9sppADghqceGyRZUNoEPIQPE+FUdTHO2Y0=
+  on:
+    repo: raveljs/ravel-steam-auth-provider
+    tags: true
+    node: '8'
+
