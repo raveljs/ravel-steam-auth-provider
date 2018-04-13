@@ -25,7 +25,7 @@ deploy:
     node: '8'
 - provider: npm
   email: robot@raveljs.com
-  tag: next
+  tag: latest
   api_key:
     secure: zCndhEXZ88s1/lLR2UGMCmHja1LtkFqy5PIFy/tRDhJr+HHMFbPxRLlExNWGH7mvvlV7VJx1B4u+h3Fvf/Ny5kXOm/J86HNxjYh9utcIeZ41MHEz3jqEA3DEfFr+FkWMp/RE+LX/dZ1IrNJBq6SD5Xx1DcM/V74jm1DaKUspA/EqJ4uEij8VbCM0WYuTqHKRwKT/s4wC9yEZzMy9Nhe+26v23aFQuvD938xRhF1kPzVKG7/ZAHuzFMa2ud36VgbW21FrAGqQ3uR0FBzQe+T/MF4oGyMdbUpPo7YrV91nG6nYXmm6p1FeuUT2o3up4+eWjDA2PAgd3LzyCD7LiFA4iZS7uNcadQYNtkpIfPozW25j99ZTqxfGGPBIlYo2A/SRJGdcKytV9DUXd5nOcIthRpxVhQvfCkRywA3rhpcPTn3tlQivhKfsxexLU0WWNdbO/0zD56DVet0Sa7gzETQJ7tcr+t1Ru4rWTcTGDAV1e+54+5wnbHDsrIFydF4t/G/IqU0B+EoUCZcNP02amP5GhrNRvqui46p/pk2c35g4zVuaEWdY2lXI0SkEXGhgGnFwGEb/rlcNLKXoFM6RWv1Pgb6iQscE1tYMmluMfBCGQHbzH/b5Ebos4nWEsGMDpjDgtalkepSm81KSQkxO8196iakemGkuIx3LZJb33sdV3hc=
   on:

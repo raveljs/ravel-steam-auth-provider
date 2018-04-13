@@ -1,5 +1,5 @@
 {
-  "version": "0.24.2",
+  "version": "0.24.3",
   "name": "@ravel/ravel-steam-auth-provider",
   "author": "Michael Laccetti <michael@laccetti.com> (https://laccetti.com/)",
   "description": "Steam Auth Provider for Ravel Rapid Application Development Framework",
